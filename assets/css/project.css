@@ -1,29 +1,32 @@
 /****************** Main Header ****************/
-.header {
-     margin-top: 90px;
+.project-header {
+     background-color: #D9D9D9;
+     padding-top: 10em;
+     position: relative;
+     bottom: -1px;
 }
 
-.header .header-title {
+.project-header .header-title {
      color: var(--color-muted);
-     font-size: clamp(2rem, 4vw, 3rem);
-     font-weight: 400;
+     font-size: clamp(1.3rem, 2vw, 2.4rem);
 }
 
 
-.header .header-image {
+.project-header .header-image {
      width: 100%;
      max-width: 200px;
 }
 
 
 @media (max-width: 768px) {
-     .header .header-image {
+     .project-header .header-image {
           width: 100%;
           max-width: 180px;
      }
 }
+
 @media (max-width: 500px) {
-     .header .header-image {
+     .project-header .header-image {
           width: 100%;
           max-width: 130px;
      }
@@ -51,8 +54,9 @@
      color: #E3E3E3;
      font-weight: 400;
      white-space: nowrap;
-     line-height: 110%;
+     line-height: 130%;
 }
+
 @media screen and (max-width: 991px) {
      .marquee-text {
           font-size: 350px;
@@ -70,184 +74,250 @@
           font-size: 260px;
      }
 }
+
 /****************** Scroller Section ****************/
 
-/****************** Service Card - Section ****************/
-.service-section {
-     background: #D9D9D9;
-     width: 100%;
-     padding-top: 40px;
-     padding-bottom: 40px;
+/****************** Project - Section ****************/
+.project-section {
      position: relative;
-
+     width: 100%;
 }
 
-.service-container {
-     width: 100%;
-     margin: 0 auto;
-     position: relative;
-     z-index: 1;
-}
-
-.service-card {
-     width: 100%;
-     max-width: 100%;
-     margin: 0 auto 60px auto;
+.project-section .down-arrow {
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 120px;
+     height: 120px;
+     background-color: #6d2732;
+     border-radius: 50%;
      display: flex;
-     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     z-index: +6;
+}
+
+.project-section .down-arrow .down-arrow-img {
+     width: 35px;
+     transform: scale(0.90) rotate(0deg);
+     transition: transform 0.4s cubic-bezier(0.32, 1.5, 0.36, 1.4);
+     /* "Break" effect */
+}
+
+.project-section .down-arrow:hover .down-arrow-img {
+     transform: scale(1.1) rotate(35deg);
+}
+
+.project-section .project-main-holder {
+     width: 100vw;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 0;
+     /* or your desired gap */
+}
+
+.project-section .project-holder .project-profile {
+     flex: 1 1 100%;
+     position: relative;
+     overflow: hidden;
+     display: flex;
      align-items: center;
      justify-content: center;
-     transition: box-shadow 0.3s, transform 0.3s;
-     cursor: pointer;
-     position: sticky;
-     top: 80px;
-     overflow: hidden;
-}
-
-.service-card._01 {
-     z-index: 1;
-}
-
-.service-card._02 {
-     z-index: 2;
-}
-
-.service-card._03 {
-     z-index: 3;
-}
-
-.service-card._04 {
-     z-index: 4;
-}
-
-.service-card._05 {
-     z-index: 5;
-}
-
-.service-card._06 {
-     z-index: 6;
-}
-
-.service-image-wrapper {
-     position: relative;
-     transition: all 0.3s ease-in-out;
-}
-
-
-
-.service-card img {
-     max-width: 100%;
-     display: inline-block;
+     background: #000;
+     /* Optional: background color for the profile */
 
 }
 
-.service-card:hover .service-image-wrapper {
-     transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(5deg) rotateZ(2.2deg) skew(0deg, 0deg);
-     transform-style: preserve-3d;
-     transition: all 0.3s ease-in-out;
+.project-section .project-holder .project-profile img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     /* Ensures full image is visible, no cropping */
+     display: block;
+     background: #000;
+     /* Optional: for letterboxing */
 }
 
-.service-content-wrapper {
+.project-section .project-profile .project-title {
+     height: 100%;
+     flex-direction: column;
+     display: flex;
+     justify-content: space-between;
+     padding: 7em 6em;
      position: absolute;
+     color: #fff;
+     font-family: 'Playfair-Regular';
+     width: 100%;
+}
+
+.project-section .project-profile .project-title .title-top {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.title-head-mobile {
+     font-size: clamp(2rem, 4vw, 5rem);
+     font-family: 'Playfair-Display';
+     display: none;
+}
+
+.verticle-bar {
+     display: none;
+}
+
+.project-section .project-profile .project-title .title-top .title-head {
+     font-size: clamp(2rem, 4.5vw, 5rem);
+     font-family: 'Playfair-Display';
+     font-weight: 400;
+}
+
+.project-section .project-profile .project-title .title-top .title-para {
+     font-size: clamp(1.2rem, 3vw, 2.6rem);
+     font-family: 'Playfair-Regular';
+      font-weight: 400;
+}
+
+.project-section .project-profile .project-title .title-top .top-tags {
      display: flex;
      flex-direction: column;
+     font-size: 14px;
+     font-family: 'Gotham-Book';
+     width: 200px;
+}
+
+.project-section .project-profile .project-title .title-bottom {
+     display: flex;
      justify-content: space-between;
-     height: 100%;
-     width: 100%;
-     padding-bottom: 5em;
-}
-
-.service-content-wrapper .service-num {
-     color: #6D2732;
-     font-family: "Playfair-Regular";
-     font-size: clamp(2rem, 5vw, 4rem);
-     font-style: normal;
-     font-weight: 500;
-     line-height: 130%;
-     /* 93.75% */
-}
-
-.service-content-wrapper .service-heading {
-     color: #FFF;
-     font-family: "Playfair-Medium";
-     font-size: clamp(2rem, 4vw, 8rem);
-     font-style: normal;
-     font-weight: 500;
-     line-height: 129%;
-     /* 104.167% */
-}
-
-.service-content-wrapper .service-text {
-     color: #FFF;
-     font-family: 'Gotham-Light';
-     font-size: clamp(1rem, 2.5vw, 1.5rem);
-     font-style: italic;
-     font-weight: 400;
-     line-height: 129%;
+     align-items: center;
      width: 100%;
 }
 
-.service-content-wrapper .service-tags {
-     color: #F1E8E0;
-     font-family: 'Gotham-Light';
-     font-size: clamp(1rem, 1.5vw, 1.4rem);
-     font-style: italic;
-     font-weight: 400;
-     line-height: 129%;
+.project-section .project-profile .project-title .title-bottom .title-head {
+     font-size: clamp(2rem, 4vw, 5rem);
+     font-family: 'Gotham-Book';
+}
+
+.project-section .project-profile .project-title .title-bottom .bottom-tags {
+     display: flex;
+     flex-direction: column;
+     font-size: 14px;
+     font-family: 'Gotham-Book';
+     width: 200px;
+}
+
+ 
+/* Responsive adjustments */
+
+
+@media screen and (max-width: 1300px) {
+     .project-section .project-holder .project-profile {
+          flex: 1 1 100%;
+          height: 700px;
+     }
+
+     .project-section .down-arrow {
+          width: 90px;
+          height: 90px;
+     }
 
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1024px) {
+
+     .project-section .project-profile .project-title {
+          padding: 2em 2em;
+     }
+
+     .project-section .project-profile .project-title .title-top .top-tags {
+          font-size: 13px;
+     }
+
+     .project-section .project-profile .project-title .title-bottom .bottom-tags {
+          font-size: 13px;
+     }
+
+     .project-section .project-holder .project-profile {
+          height: 600px;
+     }
+
+     .project-section .down-arrow .down-arrow-img {
+          width: 30px;
+     }
+}
+
+
+@media (max-width: 767px) {
+     .project-section .project-holder .project-profile {
+          height: 450px;
+     }
+
+     .project-section .down-arrow .down-arrow-img {
+          width: 25px;
+     }
+}
+
+@media screen and (max-width: 425px) {
+     .verticle-bar {
+          display: inline-block;
+     }
+
      br {
           display: none;
      }
-}
 
-@media screen and (max-width:768px) {
-     .service-image-wrapper {
-          height: 300px;
+     .title-head-mobile {
+          display: block;
      }
 
-     .service-card {
-          margin: 0 auto 20px auto;
+     .project-section .project-profile .project-title {
+          justify-content: space-between;
      }
 
-     .service-content-wrapper {
-          position: absolute;
-          background-color: #3b1e2373;
+     .project-section .project-profile .project-title .title-bottom {
+          padding-top: 10px;
+     }
+
+     .project-section .project-profile .project-title .title-bottom .title-head {
+          display: none;
+     }
+
+     .project-section .project-profile .project-title .title-top {
+          align-items: self-start;
+          flex-direction: column;
           gap: 20px;
-          padding-bottom: 2em;
      }
 
-     .service-card img {
-          object-fit: cover;
-          height: 100%;
-          aspect-ratio: 3 / 1;
+     .project-section .project-profile .project-title .title-top .top-tags {
+          font-size: 13px;
+           width: 100%;
      }
 
-     .service-content-wrapper .service-num {
-          color: #fff;
+     .project-section .project-profile .project-title .title-bottom .bottom-tags {
+          font-size: 13px;
+          width: 100%;
      }
 
-     .service-content-wrapper .service-heading {
-          font-size: clamp(1.5rem, 4vw, 8rem);
+     .project-section .project-holder .project-profile {
+          height: 400px;
      }
 
-     .service-content-wrapper .service-text {
-          font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+     .project-section .down-arrow {
+          width: 55px;
+          height: 55px;
      }
 
-     .service-content-wrapper .service-tags {
-          font-size: clamp(0.8rem, 1.5vw, 1.4rem);
+     .project-section .down-arrow .down-arrow-img {
+          width: 16px;
      }
 
-     .service-content-wrapper .service-tags img {
-          width: 13px;
-          height: 10px;
-     }
 }
 
-/****************** Service Card - Section ****************/
+@media screen and (max-width: 375px) {}
+
+/****************** Project - Section ****************/
 
 
 /****************** Scroller Footer ****************/
@@ -257,7 +327,7 @@
      min-height: 100px;
      display: flex;
      align-items: center;
-     padding-top: 3em;
+     padding-top: 5em;
 }
 
 .marquee-inner-2 {
@@ -335,8 +405,8 @@
      }
 }
 
-/****************** Scroller Footer ****************/
 
+/****************** Scroller Footer ****************/
 
 
 /****************** Socials Share Section ****************/
@@ -433,8 +503,6 @@
 /****************** Socials Share Section ****************/
 
 
-
-
 /****************** Brand Reimaging Section ****************/
 
 .brand-reimaging-section {
@@ -489,7 +557,6 @@
      line-height: normal;
      text-transform: uppercase;
 }
-
 
 .brand-reimaging-section .brand-reimaging-bgtext {
      display: flex;
@@ -549,5 +616,6 @@
           width: 50%;
      }
 }
+
 
 /****************** Brand Reimaging Section ****************/

@@ -5,20 +5,27 @@
 
 .header .header-title {
      color: var(--color-muted);
-     font-size: clamp(2.3rem, 5vw, 4.5rem);
+     font-size: clamp(2.3rem, 4vw, 4.5rem);
 }
 
 
 .header .header-image {
      width: 100%;
-     max-width: 180px;
+     max-width: 200px;
 }
 
 
 @media (max-width: 768px) {
      .header .header-image {
           width: 100%;
-          max-width: 150px;
+          max-width: 180px;
+     }
+}
+
+@media (max-width: 500px) {
+     .header .header-image {
+          width: 100%;
+          max-width: 130px;
      }
 }
 
@@ -39,11 +46,30 @@
 }
 
 .marquee-text {
-     font-size: 14vw;
+     font-size: 400px;
      font-family: 'Anton-Regular', sans-serif;
      color: #E3E3E3;
      font-weight: 400;
      white-space: nowrap;
+     line-height: 130%;
+}
+
+@media screen and (max-width: 991px) {
+     .marquee-text {
+          font-size: 330px;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     .marquee-text {
+          font-size: 220px;
+     }
+}
+
+@media screen and (max-width: 479px) {
+     .marquee-text {
+          font-size: 260px;
+     }
 }
 
 /****************** Scroller Section ****************/
@@ -251,8 +277,14 @@
 }
 
 
+@media screen and (max-width:1200px) {
+     br {
+          display: none;
+     }
+}
 
 @media (max-width: 1024px) {
+
      .helping-panel-container {
           flex-wrap: wrap;
           gap: 12px;
@@ -319,9 +351,7 @@
 }
 
 @media (max-width: 500px) {
-     br {
-          display: none;
-     }
+
 
      .helping-panel-container .panel {
           min-width: 90vw;
@@ -372,7 +402,7 @@
      top: 50%;
      transform: translateY(-50%);
      z-index: 0;
-      width: 25%;
+     width: 25%;
      min-width: 0px;
      max-width: 300px;
      height: 80vh;
@@ -487,6 +517,7 @@
      min-height: 100px;
      display: flex;
      align-items: center;
+     padding-top: 5em;
 }
 
 .marquee-inner-2 {
@@ -495,7 +526,7 @@
 }
 
 .marquee-text-2 {
-     font-size: 12vw;
+     font-size: 200px;
      font-family: 'Cardo-Italic';
      color: #322D2A;
      font-weight: 400;
@@ -503,18 +534,65 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     line-height: 135%;
 }
 
 .marquee-img-1 {
-     width: 10vw;
+     width: 160px;
 }
 
 .marquee-img-2 {
-     width: 10vw;
+     width: 160px;
 }
 
 .marquee-img-3 {
-     width: 10vw;
+     width: 160px;
+}
+
+@media screen and (max-width: 991px) {
+     .marquee-text-2 {
+          font-size: 150px;
+     }
+
+     .marquee-img-1 {
+          width: 110px;
+     }
+
+     .marquee-img-2 {
+          width: 110px;
+     }
+
+     .marquee-img-3 {
+          width: 110px;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     .marquee-text-2 {
+          font-size: 100px;
+     }
+}
+
+@media screen and (max-width: 479px) {
+     .marquee-text-2 {
+          font-size: 80px;
+     }
+
+     .scroller-gif-section {
+          padding-top: 2em;
+     }
+
+     .marquee-img-1 {
+          width: 90px;
+     }
+
+     .marquee-img-2 {
+          width: 90px;
+     }
+
+     .marquee-img-3 {
+          width: 90px;
+     }
 }
 
 /****************** Scroller Footer ****************/
@@ -660,7 +738,7 @@
 
 
 .brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
-     font-size: 18vw;
+     font-size: 400px;
      color: #5E0A14;
      font-family: 'Anton-Regular';
      font-style: normal;
@@ -682,6 +760,23 @@
      align-items: center;
 }
 
+@media screen and (max-width: 991px) {
+     .brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
+          font-size: 350px;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     .brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
+          font-size: 300px;
+     }
+}
+
+@media screen and (max-width: 479px) {
+     .brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
+          font-size: 260px;
+     }
+}
 
 @media screen and (max-width: 768px) {
      .brand-reimaging-section {
@@ -749,7 +844,7 @@
 
      .conversation-section {
           min-height: 700px;
-          background: url(../images/home-page/conversation-bg.svg) center left / cover no-repeat;
+          background: url(../images/home-page/conversation-bg.svg) 65% 100% / cover no-repeat;
      }
 
      .conversation-content {
