@@ -3,11 +3,10 @@
     position: relative;
     bottom: 0px;
     height: 100vh;
-    /* fallback for old browsers */
     height: 100dvh;
     /* dynamic viewport height, accounts for mobile browser UI */
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -24,29 +23,35 @@
 }
 
 .socialMedia-banner .socialMedia-banner-img {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     width: 100%;
-    max-width: 620px;
+    max-width: 700px;
 }
 
 @media (max-width: 1150px) {
     .socialMedia-banner .container-fluid {
         padding-top: clamp(4rem, 16vh, 8rem);
     }
+
+    .socialMedia-banner .custom-row-height {
+        height: 75vh;
+        height: 75dvh;
+    }
 }
 
 @media (max-width: 991px) {
     .socialMedia-banner .container-fluid {
-        padding-top: clamp(4rem, 15vh, 8rem);
-    } 
+        /* padding-top: clamp(4rem, 15vh, 8rem); */
+    }
+
     .socialMedia-banner .socialMedia-banner-img {
         max-width: 700px;
-    } 
+    }
 }
 
 @media (max-width: 550px) {
     .socialMedia-banner .container-fluid {
-        padding-top: clamp(4rem, 18vh, 8rem);
+        /* padding-top: clamp(4rem, 18vh, 8rem); */
     }
 }
