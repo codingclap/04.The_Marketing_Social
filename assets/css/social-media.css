@@ -41,17 +41,20 @@
 }
 
 @media (max-width: 991px) {
-    .socialMedia-banner .container-fluid {
-        /* padding-top: clamp(4rem, 15vh, 8rem); */
-    }
-
+     
     .socialMedia-banner .socialMedia-banner-img {
         max-width: 700px;
     }
 }
 
 @media (max-width: 550px) {
-    .socialMedia-banner .container-fluid {
-        /* padding-top: clamp(4rem, 18vh, 8rem); */
-    }
+    .socialMedia-banner .socialMedia-title {
+        font-size: clamp(1.8rem, 4vw, 3.2rem);
+    }   
+}
+
+@media (max-width: 325px) {
+    .socialMedia-banner .socialMedia-title {
+        font-size: clamp(1.6rem, 4vw, 3.2rem);
+    }   
 }
