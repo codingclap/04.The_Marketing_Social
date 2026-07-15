@@ -34,7 +34,7 @@
         padding-top: clamp(4rem, 16vh, 8rem);
     }
 
-    .socialMedia-banner .custom-row-height {
+    .socialMedia-banner .custom-height {
         height: 75vh;
         height: 75dvh;
     }
