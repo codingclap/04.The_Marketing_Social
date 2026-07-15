@@ -2,11 +2,17 @@
     background-color: #fff;
     position: relative;
     bottom: 0px;
-    width: 100%;
     height: 100vh;
+    /* fallback for old browsers */
+    height: 100dvh;
+    /* dynamic viewport height, accounts for mobile browser UI */
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+.socialMedia-banner .container-fluid {
+    padding-top: clamp(4rem, 15vh, 8rem);
 }
 
 .socialMedia-banner .socialMedia-title {
@@ -21,13 +27,26 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    max-width: 680px;
+    max-width: 620px;
+}
+
+@media (max-width: 1150px) {
+    .socialMedia-banner .container-fluid {
+        padding-top: clamp(4rem, 16vh, 8rem);
+    }
 }
 
 @media (max-width: 991px) {
+    .socialMedia-banner .container-fluid {
+        padding-top: clamp(4rem, 15vh, 8rem);
+    } 
     .socialMedia-banner .socialMedia-banner-img {
-         
         max-width: 700px;
-    }
+    } 
+}
 
+@media (max-width: 550px) {
+    .socialMedia-banner .container-fluid {
+        padding-top: clamp(4rem, 18vh, 8rem);
+    }
 }
