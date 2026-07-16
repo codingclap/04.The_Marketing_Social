@@ -73,17 +73,17 @@
 
 /***************** Social Media Header  *******************/
 
-/***************** Social Media Service  *******************/
+/***************** why Social Media  *******************/
 
-.socialMedia-service .serviceTitle {
+.why-socialMedia .socialMedia-title {
     font-size: clamp(2.75rem, 4vw, 3.1rem);
 }
 
-.socialMedia-service .serviceSubtitle {
+.why-socialMedia .socialMedia-subtitle {
     font-size: clamp(2.5rem, 4vw, 2.9rem);
 }
 
-.socialMedia-service .serviceText-container .serviceText-img {
+.why-socialMedia .socialMediaText-container .socialMediaText-img {
     width: 100%;
     max-width: 40px;
     display: flex;
@@ -91,59 +91,180 @@
     align-items: center;
 }
 
-.socialMedia-service .serviceText-container .serviceText-img img {
+.why-socialMedia .socialMediaText-container .socialMediaText-img img {
     width: 26px;
     height: 26px;
 }
 
-.socialMedia-service .serviceText-container .serviceText-list {
+.why-socialMedia .socialMediaText-container .socialMediaText-list {
     font-family: 'Helventica-light', sans-serif;
     font-size: clamp(1.1rem, 1.4vw, 1.8rem);
 }
 
-.serviceText-button .btn-serviceText-primary {
+.socialMediaText-button .btn-socialMediaText-primary {
     background: #322D2A;
     border-radius: 12px;
-    font-family: 'Helventica-Neue';
+    font-family: 'Helventica-Neue-bold';
     font-style: normal;
     font-weight: 700;
     font-size: clamp(1.1rem, 1.4vw, 1.8rem);
-    line-height: 55px;
+    line-height: 28px;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 0.2rem 2rem;
-    leading-trim: both;
-    text-edge: cap;
+    padding: 1.2rem 2.5rem;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
-    .socialMedia-service .serviceTitle {
+    .why-socialMedia .socialMedia-title {
         font-size: clamp(2.5rem, 4vw, 3rem);
     }
 
-    .socialMedia-service .serviceSubtitle {
+    .why-socialMedia .socialMedia-subtitle {
         font-size: clamp(2.5rem, 4vw, 3rem);
     }
 }
 
 @media (max-width: 550px) {
-    .socialMedia-service .serviceTitle {
+    .why-socialMedia .socialMedia-title {
         font-size: clamp(2rem, 4vw, 3.25rem);
     }
 
-    .socialMedia-service .serviceSubtitle {
+    .why-socialMedia .socialMedia-subtitle {
         font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .socialMediaText-button .btn-socialMediaText-primary {
+        padding: 0.8rem 2rem;
     }
 }
 
 @media (max-width: 325px) {
-    .socialMedia-service .serviceTitle {
+    .why-socialMedia .socialMedia-title {
         font-size: clamp(1.6rem, 4vw, 3.25rem);
     }
 
-    .socialMedia-service .serviceSubtitle {
+    .why-socialMedia .socialMedia-subtitle {
         font-size: clamp(1.6rem, 4vw, 3rem);
+    }
+
+    .socialMediaText-button .btn-socialMediaText-primary {
+        padding: 0.8rem 1.5rem;
     }
 }
 
-/***************** Social Media Service  *******************/
+/***************** why Social Media   *******************/
+
+/***************** Social Media Services  *******************/
+
+.socialMedia-service .serviceTitle {
+    font-size: clamp(2.75rem, 4vw, 3.1rem);
+}
+
+.socialMedia-service .serviceSubtitle {
+    font-size: clamp(2.5rem, 4vw, 3.1rem);
+}
+
+.socialMedia-service .service-tile {
+    position: relative;
+    height: 590px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* .socialMedia-service .tile-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 35%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.05) 100%);
+    z-index: 1;
+} */
+
+.socialMedia-service .tile-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 48px 0;
+    color: #fff;
+}
+
+.socialMedia-service .tile-title {
+    font-family: 'Helventica-Neue-medium';
+    font-size: clamp(1.9rem, 1.7vw, 2rem);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.socialMedia-service .tile-text {
+    font-family: 'Helventica-light', sans-serif;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.socialMedia-service .tile-arrow {
+    position: absolute;
+    bottom: 40px;
+    right: 33px;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.socialMedia-service .tile-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+.socialMedia-service .service-tile:hover .tile-arrow{
+    transform: scale(1.1) rotate(45deg);
+    background: #ffffff00; 
+}
+.socialMedia-service .service-tile:hover .tile-bg {
+    transform: scale(1.08);
+}
+@media (max-width: 1550px) {
+    .socialMedia-service .tile-content { 
+        padding: 48px 40px 0; 
+    }
+}
+
+@media (max-width: 1440px) {
+    .socialMedia-service .tile-content {
+        padding: 40px 30px 0;
+    }
+}
+
+@media (max-width: 1350px) {
+    .socialMedia-service .service-tile {
+        height: 500px;
+    }
+
+    .socialMedia-service .tile-title {
+        font-size: clamp(1.5rem, 1.5vw, 2rem);
+    }
+}
+
+@media (max-width: 767px) {
+    .socialMedia-service .service-tile {
+        height: 380px;
+    }
+}
+
+/***************** Social Media Services  *******************/
