@@ -1,4 +1,5 @@
-.socialMedia-banner {
+/***************** Social Media Header  *******************/
+.socialMedia-header {
     background-color: #fff;
     position: relative;
     bottom: 0px;
@@ -10,19 +11,23 @@
     justify-content: space-between;
 }
 
-.socialMedia-banner .container-fluid {
+.socialMedia-header .container-fluid {
     padding-top: clamp(4rem, 15vh, 8rem);
 }
 
-.socialMedia-banner .socialMedia-title {
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
+.socialMedia-header .header-title {
+    font-size: clamp(2.75rem, 4vw, 3.25rem);
 }
 
-.socialMedia-banner .socialMedia-text {
+.socialMedia-header .header-subtitle {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+}
+
+.socialMedia-header .header-text {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
-.socialMedia-banner .socialMedia-banner-img {
+.socialMedia-header .header-img {
     /* position: absolute;
     bottom: 0; */
     width: 100%;
@@ -30,31 +35,115 @@
 }
 
 @media (max-width: 1150px) {
-    .socialMedia-banner .container-fluid {
+    .socialMedia-header .container-fluid {
         padding-top: clamp(4rem, 16vh, 8rem);
     }
 
-    .socialMedia-banner .custom-height {
+    .socialMedia-header .custom-height {
         height: 75vh;
         height: 75dvh;
     }
 }
 
 @media (max-width: 991px) {
-     
-    .socialMedia-banner .socialMedia-banner-img {
+    .socialMedia-header .header-img {
         max-width: 700px;
     }
 }
 
 @media (max-width: 550px) {
-    .socialMedia-banner .socialMedia-title {
-        font-size: clamp(1.8rem, 4vw, 3.2rem);
-    }   
+    .socialMedia-header .header-title {
+        font-size: clamp(2rem, 4vw, 3.25rem);
+    }
+
+    .socialMedia-header .header-subtitle {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
 }
 
 @media (max-width: 325px) {
-    .socialMedia-banner .socialMedia-title {
-        font-size: clamp(1.6rem, 4vw, 3.2rem);
-    }   
+    .socialMedia-header .header-title {
+        font-size: clamp(1.6rem, 4vw, 3.25rem);
+    }
+
+    .socialMedia-header .header-subtitle {
+        font-size: clamp(1.6rem, 4vw, 3rem);
+    }
 }
+
+/***************** Social Media Header  *******************/
+
+/***************** Social Media Service  *******************/
+
+.socialMedia-service .serviceTitle {
+    font-size: clamp(2.75rem, 4vw, 3.1rem);
+}
+
+.socialMedia-service .serviceSubtitle {
+    font-size: clamp(2.5rem, 4vw, 2.9rem);
+}
+
+.socialMedia-service .serviceText-container .serviceText-img {
+    width: 100%;
+    max-width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.socialMedia-service .serviceText-container .serviceText-img img {
+    width: 26px;
+    height: 26px;
+}
+
+.socialMedia-service .serviceText-container .serviceText-list {
+    font-family: 'Helventica-light', sans-serif;
+    font-size: clamp(1.1rem, 1.4vw, 1.8rem);
+}
+
+.serviceText-button .btn-serviceText-primary {
+    background: #322D2A;
+    border-radius: 12px;
+    font-family: 'Helventica-Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 1.4vw, 1.8rem);
+    line-height: 55px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.2rem 2rem;
+    leading-trim: both;
+    text-edge: cap;
+}
+
+@media (max-width: 1024px) {
+    .socialMedia-service .serviceTitle {
+        font-size: clamp(2.5rem, 4vw, 3rem);
+    }
+
+    .socialMedia-service .serviceSubtitle {
+        font-size: clamp(2.5rem, 4vw, 3rem);
+    }
+}
+
+@media (max-width: 550px) {
+    .socialMedia-service .serviceTitle {
+        font-size: clamp(2rem, 4vw, 3.25rem);
+    }
+
+    .socialMedia-service .serviceSubtitle {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+}
+
+@media (max-width: 325px) {
+    .socialMedia-service .serviceTitle {
+        font-size: clamp(1.6rem, 4vw, 3.25rem);
+    }
+
+    .socialMedia-service .serviceSubtitle {
+        font-size: clamp(1.6rem, 4vw, 3rem);
+    }
+}
+
+/***************** Social Media Service  *******************/
