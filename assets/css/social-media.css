@@ -177,12 +177,12 @@
     justify-content: flex-start;
 }
 
-/* .socialMedia-service .tile-overlay {
+.socialMedia-service .tile-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 35%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.05) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 35%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.05) 100%);
     z-index: 1;
-} */
+}
 
 .socialMedia-service .tile-content {
     position: relative;
@@ -223,6 +223,7 @@
     text-decoration: none;
     transition: transform 0.3s ease, background 0.3s ease;
 }
+
 .socialMedia-service .tile-bg {
     position: absolute;
     inset: 0;
@@ -232,32 +233,60 @@
     transition: transform 0.5s ease;
     z-index: 0;
 }
-.socialMedia-service .service-tile:hover .tile-arrow{
+
+.socialMedia-service .service-tile:hover .tile-arrow {
     transform: scale(1.1) rotate(45deg);
-    background: #ffffff00; 
+    background: #ffffff00;
 }
+
 .socialMedia-service .service-tile:hover .tile-bg {
     transform: scale(1.08);
 }
+
 @media (max-width: 1550px) {
-    .socialMedia-service .tile-content { 
-        padding: 48px 40px 0; 
+    .socialMedia-service .tile-content {
+        padding: 48px 40px 0;
     }
 }
 
 @media (max-width: 1440px) {
     .socialMedia-service .tile-content {
-        padding: 40px 30px 0;
+        padding: 40px 35px 0;
     }
 }
 
 @media (max-width: 1350px) {
-    .socialMedia-service .service-tile {
+    .socialMedia-service .serviceTtile {
         height: 500px;
     }
 
     .socialMedia-service .tile-title {
         font-size: clamp(1.5rem, 1.5vw, 2rem);
+    }
+
+    .socialMedia-service .tile-content {
+        padding: 40px 30px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .socialMedia-service .serviceTitle {
+        font-size: clamp(2.5rem, 4vw, 3rem);
+    }
+
+    .socialMedia-service .serviceSubtitle {
+        font-size: clamp(2.5rem, 4vw, 3rem);
+    }
+
+}
+
+@media (max-width: 550px) {
+    .socialMedia-service .serviceTitle {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .socialMedia-service .serviceSubtitle {
+        font-size: clamp(2rem, 4vw, 3rem);
     }
 }
 
