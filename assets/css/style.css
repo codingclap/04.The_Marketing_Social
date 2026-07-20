@@ -6,6 +6,16 @@
   src: url(../fonts/helventica/Helvetica-Regular.otf) format('opentype');
 }
 @font-face {
+  font-family: 'Helventica-Medium';
+  font-style: 100;
+  src: url(../fonts/helventica/HelveticaNowText-Medium.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'Helventica-Bold';
+  font-style: 100;
+  src: url(../fonts/helventica/Helvetica-Bold.ttf) format('opentype');
+}
+@font-face {
   font-family: 'Helventica-Neue-bold';
   font-style: 100;
   src: url(../fonts/helventica/helvetica-neue/HelveticaNeueBold.otf) format('opentype');
@@ -74,7 +84,11 @@
   font-style: 400;
   src: url(../fonts/playfair/PlayfairDisplay-Italic.ttf) format('opentype');
 }
-
+@font-face {
+  font-family: 'Playfair-MediumItalic';
+  font-style: 400;
+  src: url(../fonts/playfair/PlayfairDisplay-Italic-VariableFont_wght.ttf) format('opentype');
+}
 @font-face {
   font-family: 'Playfair-Medium';
   font-style: 700;
@@ -152,6 +166,9 @@
 
 [data-fontfamily='Playfair-Italic'] {
   font-family: 'Playfair-Italic', sans-serif;
+}
+[data-fontfamily='Playfair-MediumItalic'] {
+  font-family: 'Playfair-MediumItalic', sans-serif;
 }
 
 [data-fontfamily='Gotham-Light'] {
