@@ -17,6 +17,7 @@
 
 .socialMedia-header .header-title {
     font-size: clamp(2.75rem, 4vw, 3.25rem);
+     line-height: clamp(2.2rem, 6vw, 3.4375rem);
 }
 
 .socialMedia-header .header-subtitle {
@@ -77,6 +78,7 @@
 
 .why-socialMedia .socialMedia-title {
     font-size: clamp(2.75rem, 4vw, 3.1rem);
+     line-height: clamp(2.2rem, 6vw, 3.4375rem);
 }
 
 .why-socialMedia .socialMedia-subtitle {
@@ -159,6 +161,7 @@
 
 .socialMedia-service .serviceTitle {
     font-size: clamp(2.75rem, 4vw, 3.1rem);
+    line-height: clamp(2.2rem, 6vw, 3.4375rem);
 }
 
 .socialMedia-service .serviceSubtitle {
@@ -196,6 +199,7 @@
     font-size: clamp(1.9rem, 1.7vw, 2rem);
     font-weight: 500;
     margin-bottom: 10px;
+    line-height: clamp(1.6rem, 4vw, 2.1875rem);
 }
 
 .socialMedia-service .tile-text {
@@ -310,6 +314,7 @@
 
 .portfolio-section .portfolio-title {
     font-size: clamp(2.75rem, 4vw, 3.1rem);
+    line-height: clamp(2.2rem, 6vw, 3.4375rem);
 }
 
 .portfolio-section .portfolio-subtitle {
