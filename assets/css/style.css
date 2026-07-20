@@ -16,6 +16,11 @@
   src: url(../fonts/helventica/helvetica-neue/HelveticaNeueMedium.otf) format('opentype');
 }
 @font-face {
+  font-family: 'Helventica-Neue-light';
+  font-style: 500;
+  src: url(../fonts/helventica/helvetica-neue/HelveticaNeueLight.otf) format('opentype');
+}
+@font-face {
   font-family: 'Anton-Regular';
   font-style: 300;
   src: url(../fonts/Anton-Regular.ttf) format('opentype');
