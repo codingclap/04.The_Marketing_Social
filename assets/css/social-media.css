@@ -3,12 +3,12 @@
     background-color: #fff;
     position: relative;
     bottom: 0px;
-    height: 100vh;
-    height: 100dvh;
-    /* dynamic viewport height, accounts for mobile browser UI */
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .socialMedia-header .container-fluid {
@@ -33,6 +33,9 @@
     bottom: 0; */
     width: 100%;
     max-width: 650px;
+    max-height: 55vh;
+    max-height: 55dvh;
+    object-fit: contain;
 }
 
 @media (max-width: 1150px) {
