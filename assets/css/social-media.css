@@ -822,7 +822,7 @@
     border: 1.5px solid #000000;
     border-radius: 14px;
     overflow: hidden;
-    min-height: 130px;
+    min-height: 140px;
     background: #fff;
 }
 
@@ -874,8 +874,11 @@
     align-self: stretch;
     background-size: cover;
     background-position: center;
+    transition: flex 0.5s ease;
 }
-
+.process-row:hover .process-image {
+    flex: 0 0 250px;
+}
 /* Tablet */
 @media (max-width: 1920px) {
     .process-number {
@@ -1021,7 +1024,7 @@
 
 .why-choose-heading {
     font-family: 'Helventica-Medium';
-    font-size: clamp(1.25rem, 3.4vw, 1.75rem);
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 10px;
