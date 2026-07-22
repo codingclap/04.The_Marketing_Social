@@ -133,7 +133,7 @@
     line-height: 28px;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 16px 32px;
+    padding: 22px 32px;
     text-align: center;
     overflow: hidden;
     z-index: 1;
@@ -391,11 +391,11 @@
     display: flex;
     align-items: stretch;
     gap: 15px;
-    height: 680px;
+    height: 700px;
 }
 
 .portfolio-section .portfolio-tile-outer {
-    flex: 0 0 20%;
+    flex: 0 0 21%;
 }
 
 .portfolio-section .portfolio-middle-stack {
@@ -471,7 +471,7 @@
     justify-content: flex-start;
     color: #fff;
     font-family: 'Helventica-Regular';
-    font-size: clamp(1.1rem, 3vw, 1.5625rem);
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     z-index: 2;
     white-space: nowrap;
     overflow: hidden;
@@ -491,19 +491,29 @@
     margin-left: 8px;
 }
 
+@media (max-width: 1500px) {
+    .portfolio-section .portfolio-grid {
+        height: 650px;
+    }
+}
 
-@media (max-width: 1024px) {
-    .portfolio-section .portfolio-eyebrow {
-        font-size: clamp(1.5rem, 2.8vw, 3rem);
+@media (max-width: 1350px) {
+    .portfolio-section .portfolio-card-label {
+        left: 16px;
     }
 
-    .portfolio-section .portfolio-title {
-        font-size: clamp(2.5rem, 4vw, 3rem);
+    .portfolio-section .portfolio-card-label {
+        font-size: clamp(1rem, 1.6vw, 1.5625rem);
+    }
+
+    .portfolio-section .portfolio-card-label .portfolio-card-img {
+        width: 18px;
+        height: 18px;
     }
 }
 
 /* Tablet: stack everything into 2 equal columns, drop the asymmetric split */
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
     .portfolio-section .portfolio-grid {
         flex-wrap: wrap;
         height: auto;
@@ -528,9 +538,21 @@
         flex: 1 1 50%;
     }
 
+    .portfolio-section .portfolio-card-label {
+        font-size: clamp(1.1rem, 3vw, 1.5625rem);
+    }
+
     .portfolio-section .portfolio-card-label .portfolio-card-img {
         width: 21px;
         height: 21px;
+    }
+
+    .portfolio-section .portfolio-eyebrow {
+        font-size: clamp(1.5rem, 2.8vw, 3rem);
+    }
+
+    .portfolio-section .portfolio-title {
+        font-size: clamp(2.5rem, 4vw, 3rem);
     }
 }
 
@@ -602,8 +624,19 @@
     font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
+.platforms-section .platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .platforms-section .platform-tile {
     position: relative;
+    width: 100%;
     height: 200px;
     border-radius: 15px;
     overflow: hidden;
@@ -614,61 +647,61 @@
     justify-content: center;
 }
 
-
-/* Instagram: white outline circle icon */
 .platforms-section .platform-tile-icon {
     position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-
-/* Facebook: solid blue circle */
-/* LinkedIn / TikTok: logo images */
-.platforms-section .platform-tile img.platform-tile-logo {
-    position: relative;
-    z-index: 2;
-    max-width: 260px;
-    max-height: 60px;
-    width: auto;
-    height: auto;
+    width: 70px;
+    height: 70px;
 }
 
 .platforms-section .platform-tile-icon img.platform-tile-logo {
-    position: relative;
-    z-index: 2;
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 70px;
+    max-height: 70px;
     width: auto;
     height: auto;
+    object-fit: contain;
 }
+
 
 @media (max-width: 1024px) {
     .platforms-section .platforms-title {
         font-size: clamp(2.5rem, 4vw, 3rem);
     }
 
-    .platforms-section .platform-tile-icon img.platform-tile-logo {
-        max-width: 80px;
-        max-height: 80px;
+    .platforms-section .platforms-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        max-width: 600px;
     }
 
-    .platforms-section .platform-tile img.platform-tile-logo {
-        max-width: 260px;
-        max-height: 80px;
+    .platforms-section .platform-tile-icon {
+        width: 60px;
+        height: 60px;
     }
+
+    .platforms-section .platform-tile-icon img.platform-tile-logo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
 }
 
 @media (max-width: 768px) {
-    .platforms-section .platform-tile {
-        height: 150px;
+
+    .platforms-section .platforms-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .platforms-section .platform-tile img.platform-tile-logo {
-        max-width: 260px;
-        max-height: 50px;
+    .platforms-section .platform-tile {
+        height: 120px;
+    }
+
+    .platforms-section .platform-tile-icon {
+        width: 70px;
+        height: 60px;
     }
 
     .platforms-section .platform-tile-icon img.platform-tile-logo {
@@ -682,14 +715,23 @@
         font-size: clamp(2rem, 4vw, 3rem);
     }
 
-    .platforms-section .platform-tile img.platform-tile-logo {
-        max-width: 260px;
-        max-height: 45px;
+    .platforms-section .platforms-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .platforms-section .platform-tile {
+        height: 100px;
+    }
+
+    .platforms-section .platform-tile-icon {
+        width: 60px;
+        height: 50px;
     }
 
     .platforms-section .platform-tile-icon img.platform-tile-logo {
-        max-width: 70px;
-        max-height: 60px;
+        max-width: 60px;
+        max-height: 50px;
     }
 }
 
@@ -824,6 +866,7 @@
     overflow: hidden;
     min-height: 140px;
     background: #fff;
+
 }
 
 .process-number {
@@ -876,9 +919,14 @@
     background-position: center;
     transition: flex 0.5s ease;
 }
-.process-row:hover .process-image {
-    flex: 0 0 250px;
+
+
+@media (min-width: 1025px) {
+    .process-row:hover .process-image {
+        flex: 0 0 250px;
+    }
 }
+
 /* Tablet */
 @media (max-width: 1920px) {
     .process-number {
@@ -902,6 +950,10 @@
     .process-number {
         flex: 0 0 210px;
     }
+
+    .process-heading {
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    }
 }
 
 
@@ -916,7 +968,7 @@
     }
 
     .process-heading {
-        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
     }
 }
 
